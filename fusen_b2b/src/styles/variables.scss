@@ -1,0 +1,36 @@
+/*---- 全局样式修改 -----*/
+
+/* 全局滚动条 */
+::-webkit-scrollbar {
+  height: 12px;
+}
+::-webkit-scrollbar-thumb {
+  transition: all .1s linear;
+  background: #C1C1C1;
+  border-radius: 5px;
+  &:hover{
+    background-color: #A8A8A8;
+  }
+}
+::-webkit-scrollbar-track {
+  height: 10px;
+  border-radius: 5px;
+  background-color: #E9F5FB;
+}
+
+// 改变下拉框样式
+@import "./elSelect";
+
+// 改变输入框样式
+@import "elInput";
+
+/* 修改el-button样式 */
+@import "./elBuuton";
+
+/*修改el-table样式*/
+@import "./elTtable";
+
+/* 改变 icon 字体路径变量，必需 */
+$--font-path: '~element-ui/lib/theme-chalk/fonts';
+
+@import "~element-ui/packages/theme-chalk/src/index";

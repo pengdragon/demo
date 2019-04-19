@@ -1,0 +1,212 @@
+#app {
+  // 主体区域
+  .main-container {
+    height: 100%;
+    transition: margin-left .28s;
+    margin-left: 208px;
+    overflow-x: hidden;
+  }
+  // 展开侧边栏
+  .sidebar-container {
+    transition: width 0.28s;
+    width: 208px !important;
+    height: 100%;
+    margin-top: 70px;
+    position: fixed;
+    font-size: 0px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1001;
+    overflow: hidden;
+    border-right: 1px solid #F1F1F1;
+    //reset element-ui css
+    .horizontal-collapse-transition {
+      transition: 0s width ease-in-out, 0s padding-left ease-in-out, 0s padding-right ease-in-out;
+    }
+    .scrollbar-wrapper {
+      overflow: hidden;
+      .el-scrollbar__view {
+        height: 100%;
+      }
+    }
+    .is-horizontal {
+      display: none;
+    }
+    a {
+      display: inline-block;
+      width: 100%;
+      overflow: hidden;
+    }
+    .svg-icon {
+      margin-right: 16px;
+    }
+    .el-menu{
+      border: none;
+    }
+    // 单项侧边栏
+    .el-menu-item{
+      height: 48px;
+      line-height: 48px;
+      border-bottom: 1px solid #F7F6F4;
+      font-size: 16px;
+      color: #8F8F8F;
+      &.active-title{
+        border-left: 2px solid #FA8A0D;
+        background-color: #FAF5EF;
+        font-weight: 600;
+        color: #333;
+      }
+    }
+    /*子项,图标及字体*/
+   .el-menu--inline{
+     .el-menu-item{
+       font-size: 15px;
+     }
+     .svg-icon{
+       width: 1.6em;
+       height: 1.6em;
+       vertical-align: -0.5em;
+       fill: currentColor;
+       overflow: hidden;
+     }
+   }
+    /*侧边栏下拉item*/
+    .el-submenu {
+      // 替换展开折叠图标
+      .el-submenu__icon-arrow.el-icon-arrow-down{
+        display: block;
+        width: 6px;
+        height: 10px;
+        background: url("/src/assets/img/xiala2.png") 100% no-repeat;
+        &:before{
+          content: '';
+        }
+      }
+      // 展开旋转图标
+      &.is-opened{
+        .el-submenu__icon-arrow.el-icon-arrow-down{
+          transform: rotateZ(90deg);
+        }
+      }
+      // 可下拉展开项
+      .el-submenu__title {
+        border-bottom: 1px solid #F7F6F4;
+        height: 52px;
+        line-height: 52px;
+        font-size: 16px;
+        color: #8F8F8F;
+        &:hover {
+          background: #E9F5FB;
+        }
+      }
+      .submenu-item{
+        height: 55px;
+        line-height: 55px;
+        background-color: #37383A;
+        text-align: center;
+        border-bottom: 1px solid #565759;
+        font-size: 13px;
+        font-weight: 500;
+        &:hover{
+          background: #253A55;
+        }
+        &.is-active{
+          border-left: 2px solid #3FC3E0;
+          background: #2A2A2A;
+        }
+      }
+    }
+    /*侧边栏item*/
+   .submenu-title-noDropdown{
+     &.is-active{
+       background: #2A2A2C;
+       border-left: 2px solid #3FC3E0;
+     }
+     &:hover{
+       background: #253A55;
+     }
+   }
+  }
+  // 折叠侧边栏
+  .hideSidebar {
+    .sidebar-container {
+      width: 70px !important;
+    }
+    .main-container {
+      margin-left: 70px;
+    }
+    .submenu-title-noDropdown {
+      padding-left: 10px !important;
+      position: relative;
+      .el-tooltip {
+        padding: 0 15px !important;
+      }
+    }
+    /*隐藏时有下拉的选项*/
+    .el-submenu {
+      overflow: hidden;
+      &>.el-submenu__title {
+        .el-submenu__icon-arrow {
+          display: none;
+        }
+      }
+    }
+    .el-menu--collapse {
+      .el-submenu {
+        &>.el-submenu__title {
+          &>span {
+            height: 0;
+            width: 0;
+            overflow: hidden;
+            visibility: hidden;
+            display: inline-block;
+          }
+        }
+      }
+    }
+  }
+  .sidebar-container .nest-menu .el-submenu>.el-submenu__title,
+  .sidebar-container .el-submenu .el-menu-item {
+    min-width: 208px !important;
+  }
+  .el-menu--collapse .el-menu .el-submenu {
+    min-width: 208px !important;
+  }
+
+  //适配移动端
+  .mobile {
+    .main-container {
+      margin-left: 0px;
+    }
+    .sidebar-container {
+      transition: transform .28s;
+      width: 208px !important;
+    }
+    &.hideSidebar {
+      .sidebar-container {
+        transition-duration: 0.3s;
+        transform: translate3d(-208px, 0, 0);
+      }
+    }
+  }
+  .withoutAnimation {
+    .main-container,
+    .sidebar-container {
+      transition: none;
+    }
+  }
+}
+.el-menu--vertical{
+  .el-menu--popup-right-start{
+    background-color: #37383A;
+  }
+  .submenu-item {
+    border-bottom: 1px solid #565759;
+    text-align: center;
+    font-size: 15px;
+    &:hover{
+      background: #253A55;
+    }
+  }
+}

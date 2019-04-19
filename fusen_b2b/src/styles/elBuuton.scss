@@ -1,0 +1,33 @@
+/* 改变按钮填充/边框/字体颜色 */
+$--button-primary-fill: #339ff3;
+$--button-success-fill: #09c780;
+$--button-warning-fill: #f68909;
+$--button-info-fill: #efefef;
+$--button-info-color: #666;
+$--button-info-border: #e7e7e7;
+/* 改变默认按钮字体 */
+$--button-font-size: 16px;
+/* 改变按钮内边距 */
+$--button-small-padding-horizontal: 27px;
+$--button-small-padding-vertical: 8px;
+$--button-medium-padding-horizontal: 26px;
+$--button-medium-padding-vertical: 9.2px;
+$--button-padding-vertical: 13px;
+$--button-padding-horizontal: 36px;
+/* info按钮样式 */
+.el-button.el-button--info{
+  &:hover{
+    border: 1px solid #e7e7e7;
+  }
+}
+/* primary简单按钮样式*/
+.el-button.el-button--primary.el-button--small.is-plain{
+  background-color: #fff;
+  &:hover,&:focus{
+    color: #339ff3;
+  }
+  &:active{
+    color: #339ff3;
+    border: 1px solid #e7e7e7;
+  }
+}

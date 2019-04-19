@@ -1,0 +1,75 @@
+/*改变el-table样式*/
+$--table-header-background: #f7f7f7;
+$--table-text-color: #666;
+$--table-header-color: #666;
+$--table-border-color: #f3f3f3;
+$--table-row-hover-background: #F1F8FE;
+/*改变列表表头/表体 内边距/字体大小*/
+.el-table .el-table__header thead th{
+  padding: 11px 0;
+}
+.el-table .el-table__body-wrapper tbody .el-table__row td{
+  padding: 9px 0;
+  font-size: 14px;
+  /*修改表格内的输入框,文本居中*/
+  .el-input .el-input__inner{
+    text-align: center;
+  }
+  /*添加删除按钮样式*/
+  [delBtn],[delete]{
+    position: relative;
+    display: block;
+    width: 56px;
+    height: 22px;
+    line-height: 22px;
+    margin: 0 auto;
+    cursor: pointer!important;
+    border: 1px solid #d4ebfd;
+    border-radius: 20px;
+    &:hover{
+      border: 1px solid #339ff3;
+    }
+    &:after{
+      display: block;
+      content: '删除';
+      padding-left: 12px;
+      font-size: 12px;
+      border-radius: 20px;
+    }
+    &:before{
+      content: '';
+      display: block;
+      position: absolute;
+      left: 8px;
+      top: 5px;
+      width: 11px;
+      height: 12px;
+      background: url("../../src/assets/img/shanchu.png") 100%;
+    }
+  }
+}
+/*修改表底部合计样式*/
+$--table-footer-background: #fff;
+.el-table .el-table__footer-wrapper td{
+  background-color: #fff;
+}
+
+/* el-table滚动条样式 */
+.el-table{
+  ::-webkit-scrollbar {
+    height: 12px;
+  }
+  ::-webkit-scrollbar-thumb {
+    transition: all .1s linear;
+    background: #C1C1C1;
+    border-radius: 5px;
+    &:hover{
+      background-color: #A8A8A8;
+    }
+  }
+  ::-webkit-scrollbar-track {
+    height: 10px;
+    border-radius: 5px;
+    background-color: #E9F5FB;
+  }
+}

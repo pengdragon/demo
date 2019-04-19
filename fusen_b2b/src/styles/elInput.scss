@@ -1,0 +1,13 @@
+/*输入框修改*/
+$--input-width: 276px;
+$--input-height: 34px;
+$--input-font-size: 12px;
+$--input-mini-height: 26px;
+$--input-mini-font-size: 14px;
+div.el-input{
+  width: 276px;
+}
+/*el-table表格内的输入框*/
+.el-table div.el-input{
+  width: 100%;
+}
