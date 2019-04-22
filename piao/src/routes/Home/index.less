@@ -1,0 +1,133 @@
+// 查询会议室
+.banner{
+  width: 100%;
+  height: 150px;
+  background: url(../../../public/images/banner.png)center no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  top: 0;
+}
+.seach{
+  width: 70%;
+  height: 30px;
+  background:rgba(0, 0, 0, .4);
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  a{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    color: white;
+    opacity: 1;
+    background: none;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    img{
+      height: 70%;
+      background: none;
+    }
+    span{
+      text-align:center;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      background: none;
+      opacity: 0.8;
+      padding-left: 5px;
+    }
+  }
+  
+} 
+
+// 会议室列表(标题)
+.meetinglist{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #125DCE;
+  font-size: 14px;
+  height: 55px;
+  position: sticky;
+  top: 150px;
+  background: white;
+  p{
+    height: 80%;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #125DCE;
+    span{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 10px;
+      letter-spacing:0;
+    }
+  }
+}
+
+// 会议室列表(内容)
+.meetlist ul{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 13px;
+  padding-bottom: 55px;
+  li{
+    width: 45%;
+    // height: 35%;
+    margin-bottom: 5px;
+    a{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      .meetfunk{
+        width: 100%;
+        p{
+          width: 90%;
+          overflow: hidden;
+          text-overflow:ellipsis;
+          white-space: nowrap; 
+        }
+        div{
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          width: 100%;
+          span{
+            display: flex;
+            width: 70px;
+            height: 18px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+          }
+          span:nth-of-type(2){
+            color: #ccc;
+          }
+          
+        }
+      }
+      img{
+        width: 100%;
+      }
+    }
+  }
+}
+

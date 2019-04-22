@@ -1,0 +1,12 @@
+{
+  "indexURL": "h5://20190226111443945/html/index.html",
+  "appId": "20190226111443945",
+  "minSdkVersionName": "1.2.8",
+  "versionName": "0.0.2",
+  "permissions": [
+    "outerNet",
+    "contact",
+    "file",
+    "media"
+  ]
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title></title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+  <link href="../../../../common/css/hwh5.css?v=<%= htmlWebpackPlugin.options.version %>" rel="stylesheet" />
+  <!-- <script src="../public/js/hotcss.js"></script> -->
+</head>
+
+<body>
+  <div id="root"></div>
+  <%= htmlWebpackPlugin.options.vconsole === true ? '<script type="text/javascript" src="../../../../common/js/vconsole.js"></script>' : '' %>
+    <script type="text/javascript" src="../../../../common/js/hwh5.js?v=<%= htmlWebpackPlugin.options.version %>"></script>
+</body>
+<script>
+  // 解决iOS webview 滚动反弹会出现整个页面可以跟着动的问题
+  if (/iP(hone|od|ad)/.test(navigator.userAgent)) {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "%PUBLIC_URL%/js/inobounce.js";
+    document.body.appendChild(script);
+  }
+  document.body.addEventListener('touchstart', function () { });
+</script>
+
+</html>

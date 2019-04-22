@@ -1,0 +1,12 @@
+// Workspace settings
+{
+  // The following will hide the js and map files in the editor
+  "files.exclude": {
+    "node_modules": true,
+    "jsconfig.json": true,
+    "package-lock.json": true,
+    ".*": true,
+    "yarn.lock": true
+  },
+  "ycy.reminderViewIntervalInMinutes": 1
+}

@@ -1,0 +1,13 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/database/database",
+    "pages/files/files",
+    "pages/function/function"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "云开发",
+    "navigationBarTextStyle": "black"
+  }
+}

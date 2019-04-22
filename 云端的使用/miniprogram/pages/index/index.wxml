@@ -1,0 +1,12 @@
+<navigator url="../database/database">
+  <button>云开发-数据库</button>
+</navigator>
+
+<navigator url="/pages/files/files">
+  <button>云开发-存储</button>
+</navigator>
+
+
+<navigator url="/pages/function/function">
+  <button>云开发-云函数</button>
+</navigator>

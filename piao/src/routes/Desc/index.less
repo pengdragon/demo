@@ -1,0 +1,121 @@
+.search{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  // justify-content: center;
+  align-items: center;
+  .inp:nth-child(1){
+    margin-top: 30px;
+  }
+  .inp{
+    width: 85%;
+    height: 60px;;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+    position: relative;
+    span{
+      font-size: 18px;
+      margin-right: 10px;
+    }
+    input{
+      height: 100%;
+      display: inline-block;
+      border: none;
+      font-size: 16px;
+      background: none;
+    }
+    p{
+      width: 0;
+      height: 1px;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%,0);
+      transition: 0.2s;
+      background: blue;
+    }
+    input:focus~p{
+      width: 100%;
+    }
+    .gongneng{
+      width: 100%;
+      position: relative;
+      div{
+        width: 20px;
+        height: 70%;
+        background: url("../../../public/images/left.png") no-repeat;
+        background-size: cover;
+        position: absolute;
+        right: 0;
+        top: 0;
+        transition: 0.2s;
+        transition-delay:0.2s;
+        transform-origin: center;
+      }
+    }
+  }
+  .inp:nth-child(3) {
+    align-items: flex-start;
+    position: relative;
+    transition: 0.2s;
+    transition-delay:0.2s;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+    margin-top: 15px;
+    .checkbox{
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 10px;
+      transition: 0.2s;
+      transition-delay:0.2s;
+      position: absolute;
+      .check{
+        width: 25%;
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        position: relative;
+        margin-bottom: 5px;
+        input[type="checkbox"]{
+          margin-right: 8px;
+          opacity: 0;
+        }
+        input[type="checkbox"] + label::before {
+          content: '\a0'; 
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 18px;
+          height: 18px;
+          border-radius: 2px;
+          background: white;
+          border: 1px solid #ccc;
+          position: absolute;
+          left: 0;
+          top: 0;
+        }
+        input[type="checkbox"]:checked + label::before {
+          content: '\2713';
+          color: blue;
+          font-weight: 999;
+        }
+        input[type="checkbox"]:focus + label::before {
+          box-shadow: 0 0 1px 1px rgb(146, 211, 255);
+        }
+        input[type="checkbox"]:disabled + label::before {
+          box-shadow: none;
+        }
+      }
+    }
+  }
+}
+.serbtn{
+  width: 86% !important;
+  font-size: 20px;
+  font-weight: 999;
+}
