@@ -21,11 +21,19 @@ export const getHomeInfo = () => async (dispatch, getState) => {
   }
 };
 
-const receiveFetchDemo = response => ({
-  type: 'RECEIVE_FETCHDEMO',
-  dataList: response
-});
-
+const receiveFetchDemo = response => {
+  ({
+    type: 'RECEIVE_FETCHDEMO',
+    dataList: response
+  });
+}
+function receiveFetchDemo(response) {
+  return {
+    type: "RECEIVE_FETCHDEMO",
+    dataList: response
+  };
+}
+item => { }
 export const getFetchDemo = () => async (dispatch, getState) => {
   try {
     console.log('Request url:', urls.getData);

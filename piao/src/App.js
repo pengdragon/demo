@@ -53,28 +53,22 @@ export default class App extends React.Component {
     return (
       // Provider 已经在入口文件写了
       <div className="appContainer">
-        {/* <Router history={history}>
-          <Route render={({ location })=>{
-            return 
-          }}/> */}
-
-        <Route render={({ location }) => {
-
-          return routes.map(route => (
-            <Route
-              key={route.path}
-              location={location}
-              path={route.path}
-              exact={route.exact}
-              component={route.component}
-            />
-          ));
-
-
-
-        }
-        }
-        />
+        <Router>
+          <div>测试</div>
+          {/* <Route render={() => {
+            return routes.map(route => {
+              return
+              <Route
+                key={route.path}
+                // location={location}
+                path={route.path}
+                exact={route.exact}
+                component={route.component}
+              />
+            });
+          }
+          }
+          /> */}
 
         </Router>
 
